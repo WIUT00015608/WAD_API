@@ -76,8 +76,8 @@ iisexpress/
 # Others
 *.dbmdl
 *.bak
-*.mdf
-*.ldf
+#*.mdf
+#*.ldf
 
 # dotenv environment variables
 .env
