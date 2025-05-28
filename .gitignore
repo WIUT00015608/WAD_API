@@ -1,0 +1,84 @@
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Rider
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# Visual Studio
+.vs/
+*.ncb
+*.aps
+*.opensdf
+*.sdf
+*.cachefile
+
+# Web API config and logs
+appsettings.Development.json
+appsettings.Local.json
+appsettings.*.json
+
+# Logs
+*.log
+Logs/
+
+# NuGet packages
+*.nupkg
+packages/
+**/packages/*
+*.snupkg
+
+# Dotnet CLI
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Test Results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Azure
+*.azurePubxml
+*.publish.xml
+# Publish Profiles
+Properties/PublishProfiles/
+
+# IIS Express
+.vs/
+iisexpress/
+
+# Resharper
+*.DotSettings.user
+
+# Others
+*.dbmdl
+*.bak
+*.mdf
+*.ldf
+
+# dotenv environment variables
+.env
+.env.*
