@@ -1,4 +1,4 @@
-﻿namespace ContactManagerAPI.Models
+﻿namespace ContactManagerAPI.DAL.Models
 {
     public class Contact
     {

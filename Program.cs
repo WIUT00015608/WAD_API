@@ -1,4 +1,4 @@
-using ContactManagerAPI.Data;
+using ContactManagerAPI.DAL;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,9 +10,15 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<ContactManagerContext>(options =>
+IConfiguration conf = builder.Configuration;
+string connStr = conf.GetConnectionString("DefaultConnection");
+
+connStr = connStr.Replace("|DbDir|", builder.Environment.ContentRootPath);
+
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+    options.UseSqlServer(connStr);
 });
 
 var app = builder.Build();

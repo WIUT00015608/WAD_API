@@ -21,6 +21,8 @@
 
   <ItemGroup>
     <Folder Include="Controllers\" />
+    <Folder Include="AppDataFile\" />
+    <Folder Include="DAL\Repositories\" />
   </ItemGroup>
 
 </Project>
