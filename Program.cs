@@ -1,5 +1,6 @@
 using ContactManagerAPI.DAL;
 using ContactManagerAPI.DAL.Repositories.CategoryRepository;
+using ContactManagerAPI.DAL.Repositories.ContactRepository;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,6 +24,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 });
 
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<IContactRepository, ContactRepository>();
 
 var app = builder.Build();
 

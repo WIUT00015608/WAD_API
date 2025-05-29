@@ -21,7 +21,6 @@ namespace ContactManagerAPI.Mappers
             {
                 Name = categoryDto.Name,
                 Description = categoryDto.Description,
-                CreatedDate = categoryDto.CreatedDate
             };
         }
     }

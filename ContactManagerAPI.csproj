@@ -21,8 +21,6 @@
 
   <ItemGroup>
     <Folder Include="AppDataFile\" />
-    <Folder Include="DAL\Repositories\ContactRepository\" />
-    <Folder Include="DTO\Contact\" />
   </ItemGroup>
 
 </Project>
