@@ -12,7 +12,8 @@ namespace ContactManagerAPI.Mappers
                 Id = model.Id,
                 Name = model.Name,
                 Description = model.Description,
-                CreatedDate = model.CreatedDate
+                CreatedDate = model.CreatedDate,
+                Contacts = model.Contacts.Select(c => c.ToContactDto()).ToList()
             };
         }
         public static Category ToCreateCategory(this CreateCategoryDto categoryDto)

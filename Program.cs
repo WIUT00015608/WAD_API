@@ -12,10 +12,14 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-IConfiguration conf = builder.Configuration;
-string connStr = conf.GetConnectionString("DefaultConnection");
+builder.Services.AddControllers()
+    .AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+    );
 
-connStr = connStr.Replace("|DbDir|", builder.Environment.ContentRootPath);
+IConfiguration conf = builder.Configuration;
+string? connStr = conf.GetConnectionString("DefaultConnection");
+
+connStr = connStr?.Replace("|DbDir|", builder.Environment.ContentRootPath);
 
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>

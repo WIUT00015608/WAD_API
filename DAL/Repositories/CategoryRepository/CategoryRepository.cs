@@ -13,11 +13,11 @@ namespace ContactManagerAPI.DAL.Repositories.CategoryRepository
         }
         public async Task<List<Category>> GetAllAsync()
         {
-            return await _context.Categories.ToListAsync();
+            return await _context.Categories.Include(c => c.Contacts).ToListAsync();
         }
         public async Task<Category?> GetByIdAsync(int id)
         {
-            return await _context.Categories.FindAsync(id);
+            return await _context.Categories.Include(c => c.Contacts).FirstOrDefaultAsync(i => i.Id == id);
         }
 
         public async Task<Category> CreateAsync(Category category)
