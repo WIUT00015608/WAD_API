@@ -2,6 +2,7 @@
 {
     public class CreateContactDto
     {
+        //Student ID is 00015608
         public required string FirstName { get; set; }
         public string LastName { get; set; } = string.Empty;
         public string Email { get; set; } = string.Empty;

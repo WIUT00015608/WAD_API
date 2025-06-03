@@ -1,5 +1,6 @@
 ﻿namespace ContactManagerAPI.DAL.Models
 {
+    //Student ID is 00015608
     public class Contact
     {
         public int Id { get; set; }

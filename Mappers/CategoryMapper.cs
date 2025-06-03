@@ -5,6 +5,7 @@ namespace ContactManagerAPI.Mappers
 {
     public static class CategoryMapper
     {
+        //Student ID is 00015608
         public static CategoryDto ToCategoryDto(this Category model)
         {
             return new CategoryDto
