@@ -1,0 +1,59 @@
+# ASP.NET Project with SQL Server Database of student 00015608
+
+## Project Overview
+This is an ASP.NET web application built using ASP.NET Core and integrates a SQL Server database for data storage and management. The project is designed to Course work for Web application development module of student 00015608. The database is included within the project structure, utilizing Entity Framework Core for data access and management.
+
+## Features
+- **ASP.NET Core**: A robust web framework for building modern, cloud-based, internet-connected applications.
+- **SQL Server Database**: Stores and manages application data, with schema defined in the project.
+- **Entity Framework Core**: ORM for database interactions, enabling seamless data access.
+
+## Prerequisites
+To run this project locally, ensure you have the following installed:
+- **.NET SDK**: Version 8.0
+- **SQL Server**: SQL Server Express 2020
+- **SQL Server Management Studio (SSMS)** (optional): For managing and querying the database.
+- **Visual Studio 2022** or later (recommended) or any IDE supporting .NET development (e.g., VS Code).
+- **Git**: For cloning and managing the repository.
+
+## Project Structure
+```
+/ProjectName
+├── /Controllers              # Contains ASP.NET Core controllers for handling HTTP requests and routing
+├── /DAL                      # Data Access Layer: includes repositories and interfaces to interact with the database
+├── /DTO                      # Data Transfer Objects used to encapsulate data between layers
+├── /Mappers                  # Mapping logic for converting between entities and DTOs
+├── /AppDataFile              # Contains the .mdf database file used for local development or attaching to SQL Server
+├── /Migrations               # Entity Framework Core migration files for tracking database schema changes
+├── /Properties               # Contains project metadata like launchSettings.json for local debugging
+├── appsettings.json          # Main configuration file with connection strings, logging settings, etc.
+├── appsettings.Development.json # Environment-specific settings used during development (overrides base settings)
+├── Program.cs                # Entry point of the ASP.NET Core application (includes app configuration and startup)
+└── README.md                 # Project documentation including setup instructions, features, and usage guide
+```
+
+## Setup Instructions
+Follow these steps to set up and run the project locally:
+
+### 1. Clone the Repository
+```bash
+
+git clone https://github.com/WIUT00015608/WAD_API.git
+cd WAD_API
+```
+
+### 2. Configure the Database
+- **Connection String**: It automatically adjusts.
+
+### 3. Restore Dependencies
+Run the following command to restore NuGet packages:
+```bash
+dotnet restore
+```
+
+### 4. Build and Run the Project
+```bash
+dotnet build
+dotnet run
+```
+The application will start, typically accessible at `https://localhost:25618` or `http://localhost:5166` (check `Properties/launchSettings.json` for port details).

@@ -50,7 +50,6 @@ if (app.Environment.IsDevelopment())
 // Comment out HTTPS redirection for development to avoid port issues
 // app.UseHttpsRedirection();
 
-// Use CORS policy - IMPORTANT: This must be before UseAuthorization and MapControllers
 app.UseCors("AllowAngularApp");
 
 app.MapControllers();
